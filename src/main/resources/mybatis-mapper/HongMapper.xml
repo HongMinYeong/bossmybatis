@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="boss.mybatis.bossmybatis.mapper.HongMapper">
+    <select id="retreiveAll" resultType="boss.mybatis.bossmybatis.domain.Hong">
+        SELECT hong.* FROM hong
+    </select>
+    <delete id="deleteUser" resultType=""boss.mybatis.bossmybatis.domain.Hong">
+    delete from Hong where id = 1;
+    </delete>
+</mapper>
