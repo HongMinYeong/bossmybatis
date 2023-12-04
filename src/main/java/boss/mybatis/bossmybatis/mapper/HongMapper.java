@@ -1,8 +1,10 @@
 package boss.mybatis.bossmybatis.mapper;
 
 import boss.mybatis.bossmybatis.domain.Hong;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -12,9 +14,18 @@ public interface HongMapper {
 
     // 1. xml 파일을 참고하겠다.
     List<Hong> retreiveAll(); //select
+    List<Hong> editUser();
+    List<Hong> deleteUser();
+
     // 2. xml 파일을 참고하지 않고 직접 sql 문을 작성하겠다.
     @Insert("insert into hong(title,content,writer) values(#{title},#{content},#{writer})")
     void  insertUser(Hong hong); //객체로 전달할 수 도 있음
     //void insertUser(String name, String nickname)
 
+    @Update("update hong set title= #{title} WHERE id = #{id}")
+    void editUser(Hong hong);
+
+
+    @Delete("delete from hong where id= #{id}")
+    void deleteUser(Hong hong);
 }

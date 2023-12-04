@@ -35,6 +35,7 @@ public class HongService {
     public void insertUser(Hong user){
         hongMapper.insertUser(user);
     }
+
     public List<HongDTO> getUser(){
         List<Hong> users = hongMapper.retreiveAll();
         List<HongDTO> result = new ArrayList<>();
@@ -51,5 +52,6 @@ public class HongService {
         }
         return result;
     }
+
 
 }

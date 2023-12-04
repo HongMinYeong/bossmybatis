@@ -6,7 +6,10 @@
     <select id="retreiveAll" resultType="boss.mybatis.bossmybatis.domain.Hong">
         SELECT hong.* FROM hong
     </select>
-    <delete id="deleteUser" resultType=""boss.mybatis.bossmybatis.domain.Hong">
-    delete from Hong where id = 1;
-    </delete>
+<!--    <delete id="deleteUser" resultType="boss.mybatis.bossmybatis.domain.Hong">-->
+<!--    delete from Hong where id = 1;-->
+<!--    </delete>-->
+<!--    <update id="editUser" resultType="boss.mybatis.bossmybatis.domain.Hong">-->
+<!--    </update>-->
+
 </mapper>
